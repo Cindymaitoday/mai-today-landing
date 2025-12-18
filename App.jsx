@@ -1067,67 +1067,32 @@ const BookingModal = ({ isOpen, onClose }) => {
                         <input type="hidden" name="_template" value="table" />
 
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">姓名 <span className="text-red-500">*</span></label>
+                            <label className="block text-sm font-bold text-gray-700 mb-1.5">如何稱呼 <span className="text-red-500">*</span></label>
                             <input
                                 type="text"
-                                name="姓名"
-                                placeholder="請輸入您的姓名"
+                                name="如何稱呼"
+                                placeholder="請輸入您的稱呼"
                                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all"
                                 required
                             />
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">公司名稱 <span className="text-red-500">*</span></label>
+                            <label className="block text-sm font-bold text-gray-700 mb-1.5">聯絡資訊 <span className="text-red-500">*</span></label>
                             <input
                                 type="text"
-                                name="公司名稱"
-                                placeholder="請輸入公司名稱"
+                                name="聯絡資訊"
+                                placeholder="Email 或 Line ID"
                                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all"
                                 required
                             />
+                            <p className="text-xs text-gray-400 mt-1">請提供 Email 或 Line ID，方便我們與您聯繫</p>
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">Email <span className="text-red-500">*</span></label>
-                            <input
-                                type="email"
-                                name="Email"
-                                placeholder="name@company.com"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all"
-                                required
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">電話</label>
-                            <input
-                                type="tel"
-                                name="電話"
-                                placeholder="0912-345-678"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all"
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">公司規模</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-1.5">您的行業類型</label>
                             <select
-                                name="公司規模"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all bg-white"
-                            >
-                                <option value="">請選擇</option>
-                                <option value="1-10人">1-10 人</option>
-                                <option value="11-50人">11-50 人</option>
-                                <option value="51-200人">51-200 人</option>
-                                <option value="201-500人">201-500 人</option>
-                                <option value="500人以上">500 人以上</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">產業別</label>
-                            <select
-                                name="產業別"
+                                name="行業類型"
                                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all bg-white"
                             >
                                 <option value="">請選擇</option>
@@ -1141,11 +1106,11 @@ const BookingModal = ({ isOpen, onClose }) => {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">您想解決的問題</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-1.5">問題描述</label>
                             <textarea
-                                name="想解決的問題"
-                                rows="3"
-                                placeholder="例如：訂單在 LINE 裡很難統計、新人報價常出錯、跨部門協作效率低..."
+                                name="問題描述"
+                                rows="4"
+                                placeholder="請簡單描述您遇到的問題或需求..."
                                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all resize-none"
                             ></textarea>
                         </div>
