@@ -692,7 +692,7 @@ const Navbar = ({ onOpenModal }) => {
                             {link.name}
                         </a>
                     ))}
-                    <Button className="px-6 py-2.5 text-sm shadow-purple-500/20" onClick={onOpenModal}>預約 Demo</Button>
+                    <Button className="px-6 py-2.5 text-sm shadow-purple-500/20" onClick={onOpenModal}>預約諮詢</Button>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -710,7 +710,7 @@ const Navbar = ({ onOpenModal }) => {
                         </a>
                     ))}
                     <div className="border-t border-gray-100 pt-4 flex flex-col gap-3">
-                        <Button className="w-full justify-center py-3" onClick={() => { onOpenModal(); setIsOpen(false); }}>預約 Demo</Button>
+                        <Button className="w-full justify-center py-3" onClick={() => { onOpenModal(); setIsOpen(false); }}>預約諮詢</Button>
                     </div>
                 </div>
             )}
@@ -1003,7 +1003,7 @@ const HeroSection = ({ onOpenModal }) => {
                 </div>
                 <div className="mb-6 inline-flex items-center gap-2 bg-[#F3F0FF] text-[#7243FA] px-4 py-2 rounded-full text-sm font-medium">
                     <Icon name="bulb" size={16} />
-                    2025 Q2 開放使用 • 搶先預約 Demo
+                    2025 Q2 開放使用 • 搶先預約諮詢
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold leading-relaxed md:leading-[1.3] mb-10 text-gray-900 tracking-tight">
                     讓企業協作跟聊天一樣<span className="text-gradient">簡單</span>
@@ -1015,7 +1015,7 @@ const HeroSection = ({ onOpenModal }) => {
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
                     <Button className="text-lg px-8 py-4 shadow-lg shadow-purple-500/30" onClick={onOpenModal}>
-                        預約 Demo
+                        預約諮詢
                     </Button>
                     <Button variant="secondary" className="text-lg px-8 py-4" onClick={() => document.getElementById('features').scrollIntoView({behavior: 'smooth'})}>
                         了解更多
@@ -1052,7 +1052,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                         <div className="w-16 h-16 bg-[#F3F0FF] rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <Icon name="calendar" size={32} className="text-[#7243FA]" />
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">預約 Demo 演示</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">預約諮詢</h3>
                         <p className="text-gray-500">填寫資訊，我們將在 2 個工作天內與您聯繫</p>
                     </div>
 
@@ -1063,7 +1063,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                     >
                         {/* FormSubmit 隱藏設定 */}
                         <input type="hidden" name="_cc" value="cindy@mai.today" />
-                        <input type="hidden" name="_subject" value="Mai.today 官網預約 Demo" />
+                        <input type="hidden" name="_subject" value="Mai.today 官網預約諮詢" />
                         <input type="hidden" name="_template" value="table" />
 
                         <div>
@@ -1082,27 +1082,11 @@ const BookingModal = ({ isOpen, onClose }) => {
                             <input
                                 type="text"
                                 name="聯絡資訊"
-                                placeholder="Email 或 Line ID"
+                                placeholder="Email、Line ID 或手機號碼"
                                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all"
                                 required
                             />
-                            <p className="text-xs text-gray-400 mt-1">請提供 Email 或 Line ID，方便我們與您聯繫</p>
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1.5">您的行業類型</label>
-                            <select
-                                name="行業類型"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all bg-white"
-                            >
-                                <option value="">請選擇</option>
-                                <option value="製造業">製造業</option>
-                                <option value="貿易/零售">貿易/零售</option>
-                                <option value="金融/保險">金融/保險</option>
-                                <option value="顧問/服務業">顧問/服務業</option>
-                                <option value="科技/軟體">科技/軟體</option>
-                                <option value="其他">其他</option>
-                            </select>
+                            <p className="text-xs text-gray-400 mt-1">請提供 Email、Line ID 或手機號碼，方便我們與您聯繫</p>
                         </div>
 
                         <div>
@@ -1110,7 +1094,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                             <textarea
                                 name="問題描述"
                                 rows="4"
-                                placeholder="請簡單描述您遇到的問題或需求..."
+                                placeholder="請簡單描述您遇到的問題或需求（可附上公司名稱）..."
                                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#7243FA] focus:border-transparent outline-none transition-all resize-none"
                             ></textarea>
                         </div>
@@ -1123,7 +1107,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                         </button>
 
                         <p className="text-xs text-gray-400 text-center">
-                            我們將在 2 個工作天內與您聯繫，為您安排專人 Demo
+                            我們將在 2 個工作天內與您聯繫，為您安排專人諮詢
                         </p>
                     </form>
                 </div>
@@ -1140,7 +1124,7 @@ const Footer = ({ onOpenModal }) => {
                 <p className="text-gray-500 mb-8 text-lg">Mai.today 協助您建立企業專屬的智能協作平台</p>
 
                 <Button className="text-lg px-8 py-4 shadow-lg shadow-purple-500/30" onClick={onOpenModal}>
-                    立即預約 Demo
+                    立即預約諮詢
                 </Button>
 
                 <div className="mt-24 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
