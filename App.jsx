@@ -678,7 +678,7 @@ const Navbar = ({ onOpenModal }) => {
 
     return (
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
-            <div className="max-w-[1600px] mx-auto px-8 flex items-center justify-between">
+            <div className="max-w-[1200px] mx-auto px-8 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
                     <img src="/logo.png" alt="Mai.today Logo" className="w-10 h-10 object-contain" />
@@ -728,7 +728,7 @@ const InteractiveHeroDemo = () => {
     };
 
     return (
-        <div className="relative max-w-[1400px] mx-auto mt-12">
+        <div className="relative max-w-[1400px] mx-auto mt-12 px-4">
             <div className="flex justify-center gap-4 mb-8 overflow-x-auto px-4">
                 {Object.keys(screens).map((key) => (
                     <button 
